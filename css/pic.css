@@ -51,7 +51,7 @@
 {
   top:116px;
   left:30px;
-  width: 25px;
+  width: 35px;
   height: 45px;
   background: linear-gradient(0,#fff, #666);
   transform: skew(-15deg); /*наклон влево*/
@@ -60,7 +60,7 @@
 {
   top:116px;
   left:85px;
-  width: 25px;
+  width: 35px;
   height: 45px;
   background: linear-gradient(0,#fff, #666);
   transform: skew(-15deg); /*наклон влево*/
@@ -69,7 +69,7 @@
 {
   top:116px;
   left:140px;
-  width: 25px;
+  width: 35px;
   height: 45px;
   background: linear-gradient(0,#fff, #666);
   transform: skew(-15deg); /*наклон влево*/
