@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <title> Задание 3</title>
+        <title> Задание 4</title>
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/pic.css">
         <link rel="stylesheet" href="../css/animation.css">
@@ -20,8 +20,8 @@
             <ul>
             <li><a href="../index.html">Главная</a></li>
             <li><a href="zadanie2.html">Задание 2</a></li>
-            <li><a href="zadanie3.html" class = "active">Задание 3</a></li>
-            <li><a href="zadanie4.html">Задание 4</a></li>
+            <li><a href="zadanie3.html">Задание 3</a></li>
+            <li><a href="zadanie4.html" class = "active">Задание 4</a></li>
             <li><a href="#">Курсовая</a></li>
             <li><a href="#">Обо мне</a></li>
             </ul>
@@ -29,24 +29,15 @@
 
         <main>
             <div class="content-box"> 
-                <div class="scene" id="scene"> 
-                    <img src="../img/prince.png" alt="Принц" class="prince">
-                    <img src="../img/frog.png" alt="Лягушка" class="frog">
-                    <img src="../img/princess.png" alt="Принцесса" class="princess">   
-                    <div class="quastion">Ты кто?</div>
-                    <div class="dialog">Принцесса</div>
-                </div>
+                <div id = "rand"></div>
+                <button id="createBtn">Создать</button>
+                <button id="recolorBtn">Перекрасить</button>
             </div>
         </main>
         
         <footer>
             <p>&copy; 2025 Николай. Учебный проект по курсу «Верстка и прототипирование».</p>
         </footer>
-        <script>
-            document.getElementById('scene').addEventListener('click', function() 
-                {
-                    this.classList.toggle('active');
-                });
-        </script>
+        <script src="../js/dom-task.js"></script>    
     </body>
 </html>

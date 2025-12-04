@@ -1,0 +1,115 @@
+/* Общий контейнер */
+.scene 
+{
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  background: #f0f8ff;
+  position: relative;      /* чтобы дочерние absolute позиционировались относительно него */
+  overflow: hidden;        /* обрезать всё, что выходит за границы */
+  cursor: pointer;
+ 
+}
+
+/* Все персонажи — absolute, позиционируются от краёв .scene */
+.prince,
+.frog,
+.princess,
+.quastion 
+{
+  position: absolute;
+}
+
+/* Принц — в центре сцены */
+.prince 
+{
+  width: 80px;
+  /*перемещает верхний левый угол элемента в центр родительского блока*/
+  top: 40%;
+  left: 20%;
+  margin-left: -25px;   
+  margin-top: -35px;   
+  z-index: 1;
+}
+
+/* Лягушка — изначально за пределами сцены */
+.frog {
+  width: 40px;
+  bottom: -50px;       
+  right: -50px;        
+  opacity: 0;
+  transition: all 0.8s ease;
+  z-index: 2;
+}
+
+/* Принцесса — в центре, но невидима */
+.princess {
+  width: 70px;
+  top: 50%;
+  left: 50%;
+  margin-left: 5px;   
+  margin-top: -35px;
+  opacity: 0;
+  transform: scale(0.5); /* начальный размер чуть меньше */
+  transition: all 0.8s ease;
+  z-index: 3;
+}
+
+
+.quastion 
+{
+  bottom: 50%;
+  left: 50%;
+  margin-left: 20px;   /* примерно половина ширины надписи */
+  font-size: 16px;
+  color: green;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.dialog
+{
+  margin-left: 95px;
+  margin-top: 30px;
+  opacity: 0;
+  color: rgb(127, 225, 127);
+  transition: opacity 1.5s;
+}
+
+/* Поведение при наведении  */
+.scene:hover .frog {
+  opacity: 1;
+  bottom: 20px;       
+  right: 20px;
+}
+.scene:hover .quastion {
+  opacity: 1;
+}
+
+/* Поведение при клике  */
+.scene.active .frog {
+  opacity: 0;
+}
+.scene.active .princess {
+  opacity: 1;
+  transform: scale(1.2); /* увеличивается */
+  
+}
+.scene.active .quastion 
+{
+  opacity: 0;
+}
+.scene.active .dialog
+{
+  opacity: 1;
+}
+.scene.active {
+  transform: rotate(360deg);
+  transition: transform 0.8s ease 2s; /* ← Задержка 2 секунды */
+}
+.scene:not(:hover):not(.active) 
+{
+  transform: none;
+  transition: transform 0.8s ease;
+}
