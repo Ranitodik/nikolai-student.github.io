@@ -1,0 +1,337 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.wr1 
+{
+    top: 290px;
+    left: 450px;
+}
+
+.wr2 
+{
+    top: 400px;
+    left: 260px;
+}
+
+.wr3 
+{
+    top: 390px;
+    left: 460px;
+}
+
+.wr4 
+{
+    top: 560px;
+    left: 290px;
+}
+
+.wr5 
+{
+    top: 500px;
+    left: 227px;
+}
+
+.wr6 
+{
+    top: 500px;
+    left: 390px;
+}
+.wr7 
+{
+    top: 400px;
+    left: 197px;
+}
+.wr8 
+{
+    top: 380px;
+    left: 227px;
+}
+
+.content-box
+{
+  background-color: white;
+  padding: 30px; /*внутренний отступы*/
+  border-radius: 12px; /*скругленный углы*/
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);/*легкая тень в конце прозрачность*/
+  margin: 30px auto;/*отступы свреху/снизу - 30 и по ширине авто*/
+  max-width: 1300px; /*максимальная ширина*/
+}
+.content-box ul 
+{
+  list-style: none;        /* убирает точки */
+  padding-left: 0;         /* убирает внутренний отступ слева */
+  margin: 0;               /* убирает внешние отступы */
+}
+.content-box li {
+  margin-bottom: 8px;      /* отступ между пунктами */
+  padding-left: 20px;      /* отступ слева (как бы "внутренний" отступ) */
+  position: relative;      /* нужно, если будешь делать кастомные маркеры */
+}
+.logotip
+{
+     /*задает шириину квадратную*/
+    width: 65px;
+    /*задает высоту квадратную*/   
+    height: 60px;
+    /*50% от ширины - 30 пикс радиус скругления - идельный круг*/
+    border-radius: 45%;
+
+    /*включает Flexbox  контейнер, что позволяет легко выравнивать по центру*/
+    display: flex;
+    margin-left:225px;
+    /*Выравнинвает по вертикали в центре*/
+    align-items: center;
+    /*выравнивает по горизонтали в центре*/
+    justify-content: center;
+
+    /*Делает текст жирным*/
+    font-weight: bold;
+    /*Размер шрифта*/
+    font-size: 24px;
+
+    
+    box-shadow: 0 2px 6px rgba(31, 134, 45, 0.4);
+
+    /*Добавляем тень для буквы*/
+    text-shadow: 0 0 2px #0047AB, 0 0 4px #0047AB; 
+
+    /*Добавляем градиент к заливке фона*/
+    background: linear-gradient(135deg, #46ddf1, #2a8de9);
+    color: white;
+}
+
+html {
+    font-size: 50%;
+}
+
+body {
+    font: normal 18px arial, helvetica, sans-serif;
+    color: #333;
+    background: #f0f0f0;
+}
+
+/* выравниваем страницу по центру, делаем отступы и цвет фона */
+#main {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    background: #fff;
+}
+/*стили для блока меню*/
+nav 
+{
+  
+  background-color:#0066cb;
+  background: linear-gradient(0deg, #46ddf1, #0050a5);
+  height: 60px;
+  display: flex;
+  
+  position: sticky; 
+  top: 0;/*Определяет расстояние от верхнего края окна браузера, при котором элемент должен прилипнуть.*/
+  z-index: 100;/*Благодаря этому значение меню отображается поверх другого контента при прокрутке, а не скрывается под ним. Чем выше число — тем «ближе к глазу» элемент.*/
+  flex-wrap: wrap; /*разрешает дочерним элементам переноситься на новую строку, если они не помещаются в одну строку*/
+  justify-content: center; /*центрирует пункты меню по горизонтали, делая интерфейс сбалансированным и адаптивнымs*/
+
+}
+
+
+/*стили для всех ссылок внутри меню*/
+nav a 
+{
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex; /*превращаем ссылку в блочный эдемент*/
+  height: 100%;
+  /*width: 150px;*/
+  min-width: 80px;
+  padding: 0 15px;
+
+  align-items: center; /*Выравнинвает по вертикали в центре*/
+  justify-content: center;   /*выравнивает по горизонтали в центре*/
+  
+}
+header
+{
+  background-color: #0050a5;
+  width: auto;
+  height: 80px;
+
+
+
+  display: flex;
+  gap: 15px; /*отступ между элеентами*/
+  font-size: 15px;  /*Размер шрифта*/
+  color: white;
+  align-items: center; /*Выравнинвает по вертикали в центре*/
+  justify-content: left;   /*выравнивает по горизонтали в центре*/
+}
+nav, article, footer 
+{
+    display: block;
+    overflow: hidden;
+}
+
+
+header
+{
+  background-color: #0050a5;
+  width: auto;
+  height: 80px;
+
+  display: flex;
+  gap: 15px; /*отступ между элеентами*/
+  font-size: 15px;  /*Размер шрифта*/
+  color: white;
+  align-items: center; /*Выравнинвает по вертикали в центре*/
+  justify-content: left;   /*выравнивает по горизонтали в центре*/
+}
+
+
+
+aside {
+    width: 100px;
+    float: left;
+    margin: 25px 0 0 25px;
+}
+
+footer
+{
+  background-color: #0050a5;
+  width: auto;
+  height: 100px;
+
+
+  display: flex;
+  font-size: 15px;  /*Размер шрифта*/
+  color: white;
+  align-items: center; /*Выравнинвает по вертикали в центре*/
+  justify-content: center;   /*выравнивает по горизонтали в центре*/
+} 
+
+.asd {
+    border: 2px dotted green;
+    border-width: medium;
+}
+
+
+
+nav li {
+    float: left;
+    margin: 8px 20px 0;
+    list-style-type: none;
+}
+
+nav a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 15px;
+}
+
+nav a:hover {
+    background-position: 1px;
+    background-repeat: no-repeat;
+}
+
+nav a:active {
+    background-position: 1px;
+    background-repeat: no-repeat;
+}
+
+
+.image {
+    margin: 10px 0;
+}
+
+
+aside h2, ul {
+    margin-left: 15px;
+}
+
+.active {
+    background-position: 1px;
+    background-repeat: no-repeat;
+}
+
+a {
+    color: #1e68ce;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, h7, h8 {
+    font-weight: normal;
+    line-height: 1;
+    margin: 8px 0 12px;
+    color: #185bb6;
+}
+
+p {
+    text-align: justify;
+    word-spacing: .1ex;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+
+
+
+.header_text {
+    color: #2c6982;
+    text-align: center;
+    padding-top: 30px;
+    font: bold 16px italic tahoma, verdana;
+}
+
+.block_a {
+    border: 2px solid rgb(229, 232, 245);
+    width: 300px;
+    height: 230px;
+    background-color:#eaeced;
+    margin: 10px;
+    margin-top: -100px;
+    margin-left: 220px; /* ← Подвинуть влево на 50px */
+    text-align: right;
+}
+
+.a {
+    margin: 5px 10px 5px 5px;
+}
+
+.menu 
+{
+    margin-left: 0;
+    background-color: rgb(255, 255, 255);
+    font-size: 1em;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.wrap 
+{
+    position: absolute;
+}
+
+.pic 
+{
+    position: absolute;
+    border: 0;
+}
+
+.pic0 {
+    position: absolute;
+    top: 250px;
+    left: 9999px;
+    border: 0;
+}
+
+
+
+
