@@ -1,0 +1,200 @@
+.content-box-pic
+{
+  background-color:  rgba(182, 219, 230, 0.699);
+  /*padding: 30px; /*внутренний отступы*/
+  border-radius: 12px; /*скругленный углы*/
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);/*легкая тень в конце прозрачность*/
+  margin: 0px auto;/*отступы свреху/снизу - 30 и по ширине авто*/
+  max-width: 200px; /*максимальная ширина*/
+}
+.picture
+{
+  position: relative; /*устанавливаем контекст позиционирования для всех одчерних
+  с position: absolute. Т.е все абсолютные элементы бдут позиционироваться относительного этого блока, а не всего окна браузера*/
+  width: 200px;
+  height: 200px;
+
+
+}
+
+
+/*все ДИВ, которые являются прямыми "детьми" пиктуре*/
+.picture > div
+{
+  position: absolute;/*делает каждый такой див в пиктуре абсолютно позиционированным*/
+  
+}
+
+.monitor
+{
+  top:25px;
+  left:30px;
+  width: 150px;
+  height: 80px;
+  border-radius: 0;
+  background: linear-gradient(135deg, #fff, #9cf);
+  border: 5px solid #999;
+}
+
+.keyboard
+{
+  top:106px;
+  left:20px;
+  width: 150px;
+  height: 80px;
+  background: #999;
+  transform: skew(-15deg); /*наклон влево*/
+  /*box-shadow: 7px 7px 0px rgba(0,0,0,0.6); /* тень под фигурой */;
+}
+
+.rectangle1
+{
+  top:116px;
+  left:30px;
+  width: 35px;
+  height: 45px;
+  background: linear-gradient(0,#fff, #666);
+  transform: skew(-15deg); /*наклон влево*/
+}  
+.rectangle2
+{
+  top:116px;
+  left:85px;
+  width: 35px;
+  height: 45px;
+  background: linear-gradient(0,#fff, #666);
+  transform: skew(-15deg); /*наклон влево*/
+}  
+.rectangle3
+{
+  top:116px;
+  left:140px;
+  width: 35px;
+  height: 45px;
+  background: linear-gradient(0,#fff, #666);
+  transform: skew(-15deg); /*наклон влево*/
+}  
+.rectangle4
+{
+  top:170px;
+  left:19px;
+  width: 140px;
+  height: 10px;
+  background: #81827d;
+  transform: skew(-15deg); /*наклон влево*/
+
+} 
+
+.border1
+{
+  top:184px;
+  left:9px;
+  width: 155px;
+  height: 8px;
+  background:black;
+}  
+.border2
+{
+  top:146px;
+  left:132px;
+  width: 80px;
+  height: 6px;
+  background:black;
+  transform: skew(-55deg);
+  rotate: -75deg;
+}  
+/*
+////////////////////////////
+/////////////////////
+
+Делаем маленькую картинку в мониторе ноута
+
+////////////////////
+///////////////////////////
+*/
+.monitor .mini-picture 
+{
+    position: relative; 
+}
+.mini-picture > div
+{
+    position: absolute;
+}
+.mini-monitor
+{
+  top:15px;
+  left: 40px;
+  width: 50px;
+  height: 26px;
+  border-radius: 0;
+  background: linear-gradient(135deg, #fff, #9cf);
+  border: 2px solid #999;
+}
+
+.mini-keyboard
+{
+  top:41px;
+  left:37px;
+  width: 50px;
+  height: 26px;
+  background: #999;
+  transform: skew(-15deg); /*наклон влево*/
+  /*box-shadow: 7px 7px 0px rgba(0,0,0,0.6); /* тень под фигурой */;
+}
+
+.mini-rectangle1
+{
+  top:45px;
+  left:40px;
+  width: 8px;
+  height: 15px;
+  background: linear-gradient(0,#fff, #666);
+  transform: skew(-15deg); /*наклон влево*/
+}  
+.mini-rectangle2
+{
+  top:45px;
+  left:57px;
+  width: 8px;
+  height: 15px;
+  background: linear-gradient(0,#fff, #666);
+  transform: skew(-15deg); /*наклон влево*/
+}  
+.mini-rectangle3
+{
+  top:45px;
+  left:74px;
+  width: 8px;
+  height: 15px;
+  background: linear-gradient(0,#fff, #666);
+  transform: skew(-15deg); /*наклон влево*/
+}  
+.mini-rectangle4
+{
+  top:62px;
+  left:36px;
+  width: 46px;
+  height: 3px;
+  background: #81827d;
+  transform: skew(-15deg); /*наклон влево*/
+
+} 
+
+.mini-border1
+{
+  top:67px;
+  left:33px;
+  width: 51px;
+  height: 2px;
+  background:black;
+}  
+.mini-border2
+{
+  top:54px;
+  left:74px;
+  width: 26px;
+  height: 2px;
+  background:black;
+  transform: skew(-55deg);
+  rotate: -75deg;
+}  

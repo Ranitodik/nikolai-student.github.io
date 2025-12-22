@@ -1,0 +1,251 @@
+* {
+  margin: 0;/*убирает внутренние отступы*/
+  padding: 0;/*внешние отступы*/
+  box-sizing: border-box;/*делает так, чтобы width и height включали в себя padding и border, а не увеличивали элемент*/
+}
+body
+{
+  font-family:  Arial,sans-serif; /*в свойстве семейства шрифтов выбираем очередность выбора браузером*/
+}
+
+.logotip
+{
+     /*задает шириину квадратную*/
+    width: 65px;
+    /*задает высоту квадратную*/   
+    height: 60px;
+    /*50% от ширины - 30 пикс радиус скругления - идельный круг*/
+    border-radius: 45%;
+
+    /*включает Flexbox  контейнер, что позволяет легко выравнивать по центру*/
+    display: flex;
+    margin-left:225px;
+    /*Выравнинвает по вертикали в центре*/
+    align-items: center;
+    /*выравнивает по горизонтали в центре*/
+    justify-content: center;
+
+    /*Делает текст жирным*/
+    font-weight: bold;
+    /*Размер шрифта*/
+    font-size: 24px;
+
+    /*Добавляет тень под блоком
+    0- смещение по горзонтали
+    2 пкс - смещение по вертикали (вниз)
+    6 пкс - размытие тени
+    rgb - цвет с прозрачностью 2*/
+    box-shadow: 0 2px 6px rgba(31, 134, 45, 0.4);
+
+    /*Добавляем тень для буквы*/
+    text-shadow: 0 0 2px #0047AB, 0 0 4px #0047AB; 
+
+    /*Добавляем градиент к заливке фона*/
+    background: linear-gradient(135deg, #46ddf1, #2a8de9);
+    color: white;
+}
+
+.headertext
+{
+  font-size:22px;
+  margin-left:7px; /*внешний отступ слева(от соседнего логотипа)*/
+ 
+}
+
+/**/
+.content-box
+{
+  background-color: white;
+  padding: 30px; /*внутренний отступы*/
+  border-radius: 12px; /*скругленный углы*/
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);/*легкая тень в конце прозрачность*/
+  margin: 30px auto;/*отступы свреху/снизу - 30 и по ширине авто*/
+  max-width: 1300px; /*максимальная ширина*/
+}
+.content-box ul 
+{
+  list-style: none;        /* убирает точки */
+  padding-left: 0;         /* убирает внутренний отступ слева */
+  margin: 0;               /* убирает внешние отступы */
+}
+.content-box li {
+  margin-bottom: 8px;      /* отступ между пунктами */
+  padding-left: 20px;      /* отступ слева (как бы "внутренний" отступ) */
+  position: relative;      /* нужно, если будешь делать кастомные маркеры */
+}
+
+
+
+/*это обёртка для всех 4 изображений*/
+.image-grid
+{
+
+  display:grid; /*включает современную систему для создания двумерных сеток (ряды + столбцы */
+  grid-template-columns: 1fr 1fr; /*1fr - одна доля. Создаем две равыне колночке (2х2 на дескторпе)*/
+  gap:20px;/*расстояние между ячейками (между блоками image-grip*/
+  margin: 20px 0; /*отступы свреху и снизу блока  (20 сверху и снизу, а 0 по бокам*/
+}
+
+
+/*стили для каждого отдельного блока с изображением*/
+.image-item
+{
+  background: #e0e0e0;
+  padding: 8px;/*отступ внутри блока */
+  text-align: center;/*выравнивание изображение по центру*/
+  border-radius: 8px;/* скругляет углы*/
+  min-height: 150px;/*устанавливает минимальную высоту блока - 150*/
+}
+
+/*только к изображениям внутри блока*/
+.image-item img
+{
+  max-width: 100%; /*изображение не выходит за пределы родительского блока, если она шире, она уменьшается пропорционально*/
+  height: auto;/*сохраняются пропорции изобржаения при изменении ширины*/
+  border-radius: 6px; /* закругление углов у картинки */
+}
+
+
+/*Медиа-запрос, условие, при котором стили применяются только на экранах шириной 768 пикселей и меньшее*/
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logotip {
+    width: 50px;
+    height: 50px;
+    font-size: 20px; 
+  }
+
+ 
+  nav a {
+    padding: 6px 8px; /* Уменьшить внутренние отступы */
+    font-size: 14px;  /* Уменьшить шрифт */
+    min-width: 60px;  /* Уменьшить минимальную ширину */
+  }
+
+  nav {
+    min-height: auto; /* Разрешить высоте меняться */
+    padding: 5px 0;   /* Уменьшить отступы */
+  }
+}
+
+footer
+{
+  background-color: #0050a5;
+  width: auto;
+  height: 100px;
+
+
+  display: flex;
+  font-size: 15px;  /*Размер шрифта*/
+  color: white;
+  align-items: center; /*Выравнинвает по вертикали в центре*/
+  justify-content: center;   /*выравнивает по горизонтали в центре*/
+} 
+
+header
+{
+  background-color: #0050a5;
+  width: auto;
+  height: 80px;
+
+
+
+  display: flex;
+  gap: 15px; /*отступ между элеентами*/
+  font-size: 15px;  /*Размер шрифта*/
+  color: white;
+  align-items: center; /*Выравнинвает по вертикали в центре*/
+  justify-content: left;   /*выравнивает по горизонтали в центре*/
+}
+
+/*стили для блока меню*/
+nav 
+{
+  
+  background-color:#0066cb;
+  background: linear-gradient(0deg, #46ddf1, #0050a5);
+  height: 60px;
+  display: flex;
+  
+  position: sticky; 
+  top: 0;/*Определяет расстояние от верхнего края окна браузера, при котором элемент должен прилипнуть.*/
+  z-index: 100;/*Благодаря этому значение меню отображается поверх другого контента при прокрутке, а не скрывается под ним. Чем выше число — тем «ближе к глазу» элемент.*/
+  flex-wrap: wrap; /*разрешает дочерним элементам переноситься на новую строку, если они не помещаются в одну строку*/
+  justify-content: center; /*центрирует пункты меню по горизонтали, делая интерфейс сбалансированным и адаптивнымs*/
+
+}
+
+/*стили для списка внутри меню*/
+nav ul
+{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  /*margin-left:225px;*/
+
+  list-style: none; /*убирает точки (как в списке которые)*/
+}
+
+/*стили для всех ссылок внутри меню*/
+nav a 
+{
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex; /*превращаем ссылку в блочный эдемент*/
+  height: 100%;
+  /*width: 150px;*/
+  min-width: 80px;
+  padding: 0 15px;
+
+  align-items: center; /*Выравнинвает по вертикали в центре*/
+  justify-content: center;   /*выравнивает по горизонтали в центре*/
+  
+}
+
+
+
+/*стиль для активной ссылки(текущей страницы*/
+.active
+{
+  background: rgba(255,255,255,0.2);
+}
+
+/*эффект при наведение курсора на любую ссылку*/
+a:hover
+{
+  background-color: rgba(255,255,255,0.1);
+}
+
+h1 
+{
+  color: #0047AB;        /* синий цвет */
+  font-weight: bold;     /* жирный */
+  margin-bottom: 16px;   /* отступ снизу */
+  font-size: 24px;       /* размер шрифта */
+}
+main p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #37405d;
+  text-align: justify;
+  margin-bottom: 16px;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+.class1 {
+  background-color: #e6f2ff; /* светло-голубой */
+  padding: 8px;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
+.class2 {
+  background-color: #f0f0f0; /* светло-серый */
+  padding: 8px;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
