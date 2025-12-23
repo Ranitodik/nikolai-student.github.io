@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рейтинг игроков</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        #ratingList 
+        {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #ratingList li 
+        {
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logotip">Z</div>
+        <div class="headertext">Стадион заданий</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="../zadania/zadanie2.html">Задание 2</a></li>
+            <li><a href="../zadania/zadanie3.html">Задание 3</a></li>
+            <li><a href="../zadania/zadanie4.html">Задание 4</a></li>
+            <li><a href="../zadania/zadanie5.html">Задание 5</a></li>
+            <li><a href="../zadania/kursovik.html">Курсовая</a></li>
+            <li><a href="#">Обо мне</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="content-box">
+            <h2>Рейтинг игроков</h2>
+            <ul id="ratingList"></ul>
+            <button onclick="window.location.href='../zadania/kursovik.html'">Назад</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Николай. Учебный проект по курсу «Верстка и прототипирование».</p>
+    </footer>
+
+    <script src="../js/rating.js"></script>
+</body>
+</html>

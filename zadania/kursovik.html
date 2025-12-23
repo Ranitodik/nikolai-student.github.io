@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Курсовая работа - Игра</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logotip">Z</div>
+        <div class="headertext">Стадион заданий</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="zadanie2.html">Задание 2</a></li>
+            <li><a href="zadanie3.html">Задание 3</a></li>
+            <li><a href="zadanie4.html">Задание 4</a></li>
+            <li><a href="zadanie5.html">Задание 5</a></li>
+            <li><a href="kursovik.html" class="active">Курсовая</a></li>
+            <li><a href="#">Обо мне</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="content-box">
+            <h2>Курсовая работа: Игра "Координация на поле"</h2>
+            <p>Выбирайте правильных игроков по признаку!</p>
+            <input type="text" id="playerName" placeholder="Введите ваше имя" style="padding: 8px; margin: 10px;">
+            <button id="startBtn" style="padding: 10px 20px; cursor: pointer;">Начать игру</button>
+            <button id="ratingBtn" style="padding: 10px 20px; cursor: pointer;">Рейтинг</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Николай. Учебный проект по курсу «Верстка и прототипирование».</p>
+    </footer>
+
+    <script>
+        document.getElementById('startBtn').addEventListener('click', () => {
+            const name = document.getElementById('playerName').value || 'Игрок';
+            localStorage.setItem('playerName', name);
+            window.location.href = '../game/game.html';
+        });
+        document.getElementById('ratingBtn').addEventListener('click', () => {
+            window.location.href = '../game/rating.html';
+        });
+    </script>
+</body>
+</html>
